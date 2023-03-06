@@ -63,7 +63,7 @@ public class S3Sync {
         }
     }
 
-    private void getLocalFileS3(File file, String folderPrefix, HashMap<String, File> localFileS3List) {
+    private void getLocalFileS3(File file, String folderPrefix, Map<String, File> localFileS3List) {
         var objectNameWithSlash = folderPrefix + "/" + file.getName();
         var objectName = objectNameWithSlash.substring(1);
         localFileS3List.put(objectName, file);
